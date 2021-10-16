@@ -32,28 +32,38 @@
             android:layout_toRightOf="@+id/foodImage"
             android:layout_marginLeft="10dp"
             />
+
         <TextView
+            android:id="@+id/foodDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/foodDesc"
-            android:text="Food Desciption"
-            android:textSize="25dp"
-            android:textColor="#000"
-            android:layout_toRightOf="@+id/foodImage"
             android:layout_below="@+id/foodName"
             android:layout_marginLeft="10dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/foodPrice"
-            android:text="Food Price"
-            android:textSize="25dp"
-            android:textColor="#000"
             android:layout_toRightOf="@+id/foodImage"
+            android:text="Food Desciption"
+            android:textColor="#000"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/foodPrice"
+            android:layout_width="192dp"
+            android:layout_height="47dp"
             android:layout_below="@+id/foodDesc"
             android:layout_marginLeft="10dp"
-            />
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/foodImage"
+            android:text="Food Price"
+            android:textColor="#000"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+
+            android:layout_width="44dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="70dp"
+            app:srcCompat="@drawable/ic_add_to_cart" />
 
 
     </RelativeLayout>
