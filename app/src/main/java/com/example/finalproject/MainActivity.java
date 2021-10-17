@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         imageVieww=(ImageView)findViewById(R.id.imageView);
         textView=(TextView)findViewById(R.id.textView7);
         imageVieww.animate().alpha(0f).setDuration(0);
-        textView.animate().alpha(0f).setDuration(0);
-
+        imageVieww.animate().alpha(0f).setDuration(0);
         textView.animate().alpha(1f).setDuration(1000).setListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
@@ -55,30 +54,37 @@ public class MainActivity extends AppCompatActivity {
                 Fauth = FirebaseAuth.getInstance();
                 if (Fauth.getCurrentUser() != null) {
                     if (Fauth.getCurrentUser().isEmailVerified()) {
-                        Fauth = FirebaseAuth.getInstance();
-                        databaseReference = FirebaseDatabase.getInstance().getReference("Customer").child(FirebaseAuth.getInstance().getUid() + "/Role");
-                        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                String role = dataSnapshot.getValue(String.class);
-                                if (role.equals("Customer")) {
-                                    Intent n = new Intent(MainActivity.this, FoodMenuActivity.class);
+                        Intent n = new Intent(MainActivity.this, FoodMenuActivity.class);
                                     startActivity(n);
                                     finish();
-                                }
-//                                if (role.equals("Admin")) {
-//                                    Intent a = new Intent(MainActivity.this, AdminActivity.class);
-//                                    startActivity(a);
+//                        Fauth = FirebaseAuth.getInstance();
+//                        databaseReference = FirebaseDatabase.getInstance().getReference("Customer").child(FirebaseAuth.getInstance().getUid() + "/Role");
+//                        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                                String role = dataSnapshot.getValue(String.class);
+//                                if (role.equals("Customer")) {
+//                                    Intent n = new Intent(MainActivity.this, FoodMenuActivity.class);
+//                                    startActivity(n);
+//                                    finish();
+//                                }else if (role == null){
+//                                    Intent n = new Intent(MainActivity.this, FoodMenuActivity.class);
+//                                    startActivity(n);
 //                                    finish();
 //                                }
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-                                Toast.makeText(MainActivity.this, databaseError.getMessage(), Toast.LENGTH_LONG).show();
-
-                            }
-                        });
+////                                if (role.equals("Admin")) {
+////                                    Intent a = new Intent(MainActivity.this, AdminActivity.class);
+////                                    startActivity(a);
+////                                    finish();
+////                                }
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                                Toast.makeText(MainActivity.this, databaseError.getMessage(), Toast.LENGTH_LONG).show();
+//
+//                            }
+//                        });
                     } else {
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
