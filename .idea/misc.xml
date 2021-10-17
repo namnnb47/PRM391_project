@@ -5,6 +5,10 @@
       <map>
         <entry key="..\:/final/PRM391_project/app/src/main/res/drawable-v24/background_shape.xml" value="0.3828125" />
         <entry key="..\:/final/PRM391_project/app/src/main/res/drawable-v24/btnred.xml" value="0.3828125" />
+        <entry key="..\:/final/PRM391_project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23333333333333334" />
+        <entry key="..\:/final/PRM391_project/app/src/main/res/drawable/edit_text_bg.xml" value="0.23333333333333334" />
+        <entry key="..\:/final/PRM391_project/app/src/main/res/drawable/ic_add_to_cart.xml" value="0.23333333333333334" />
+        <entry key="..\:/final/PRM391_project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23333333333333334" />
         <entry key="..\:/final/PRM391_project/app/src/main/res/layout/activity_food_menu.xml" value="0.20104166666666667" />
         <entry key="..\:/final/PRM391_project/app/src/main/res/layout/activity_login.xml" value="0.20104166666666667" />
         <entry key="..\:/final/PRM391_project/app/src/main/res/layout/activity_main.xml" value="0.20104166666666667" />
