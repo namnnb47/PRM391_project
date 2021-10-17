@@ -8,8 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.finalproject.ReusableCode.ReusableCodeForAll;
@@ -22,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button login;
     private Button register;
+    private ImageView image;
 
     FirebaseAuth FAuth;
     private EditText email;
@@ -35,10 +39,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        final Animation zoomin = AnimationUtils.loadAnimation(this, R.anim.zoomin);
+        final Animation zoomout = AnimationUtils.loadAnimation(this, R.anim.zoomout);
 
         try {
             login =(Button) findViewById(R.id.btnLogin);
             register =(Button) findViewById(R.id.btnRegister);
+            image = (ImageView) findViewById(R.id.imageView);
+            image.setAnimation(zoomin);
+            image.setAnimation(zoomout);
 
             email = (EditText) findViewById(R.id.txtEmail);
             password = (EditText) findViewById(R.id.txtPassword);
