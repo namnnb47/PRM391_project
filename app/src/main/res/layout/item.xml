@@ -1,61 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="6dp"
-    android:elevation="6dp"
-    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="12dp"
+    android:layout_margin="8dp"
+    android:padding="8dp"
     >
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_centerVertical="true"
-            android:id="@+id/foodImage"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"
-            />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/common_google_signin_btn_icon_dark_normal"/>
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/foodName"
-            android:text="Food Name"
+            android:layout_gravity="start"
             android:textStyle="bold"
-            android:textSize="25dp"
-            android:textColor="#000"
-            android:layout_toRightOf="@+id/foodImage"
-            android:layout_marginLeft="10dp"
-            />
+            android:textSize="30sp"
+            android:text="$1.0"
+            android:id="@+id/txtFoodPrice"/>
+
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/foodDesc"
-            android:text="Food Desciption"
-            android:textSize="25dp"
-            android:textColor="#000"
-            android:layout_toRightOf="@+id/foodImage"
-            android:layout_below="@+id/foodName"
-            android:layout_marginLeft="10dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/foodPrice"
-            android:text="Food Price"
-            android:textSize="25dp"
-            android:textColor="#000"
-            android:layout_toRightOf="@+id/foodImage"
-            android:layout_below="@+id/foodDesc"
-            android:layout_marginLeft="10dp"
-            />
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:text="Pizza"
+            android:id="@+id/txtFoodName"/>
 
 
-    </RelativeLayout>
+
+
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
